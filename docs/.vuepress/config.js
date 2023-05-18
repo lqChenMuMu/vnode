@@ -2,6 +2,7 @@ import { defaultTheme } from 'vuepress'
 
 export default {
   title: 'DouBian',
+  base: '/vnode/',
   theme: defaultTheme({
     // 默认主题配置
     navbar: [
