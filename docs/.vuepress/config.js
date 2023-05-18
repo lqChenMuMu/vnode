@@ -1,4 +1,5 @@
-import { defaultTheme } from 'vuepress'
+import { defaultTheme } from 'vuepress';
+import { autoCatalogPlugin } from "vuepress-plugin-auto-catalog";
 
 export default {
   title: 'DouBian',
@@ -25,6 +26,11 @@ export default {
           },
         ],
       },
-	 ]
+	 ],
+	 plugins: [
+		autoCatalogPlugin({
+      //插件选项
+    }),
+  ],
   }),
 }
