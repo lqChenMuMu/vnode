@@ -8,7 +8,7 @@
 
 ------
 
-```
+```shell
 $ git clone ssh://user@domain.com/xx.git 克隆远程仓库
 $ git init 初始化本地 git 仓库（新建仓库）
 ```
@@ -19,7 +19,7 @@ $ git init 初始化本地 git 仓库（新建仓库）
 
 ------
 
-```
+```shell
 $ git status 查看当前版本状态（是否修改）
 $ git diff 显示所有未添加至 index 的变更
 $ git diff HEAD 查看已缓存的与未缓存的所有改动
@@ -35,7 +35,7 @@ $ git commit -am ‘xxx’ 将 add 和 commit 合为一步
 
 ------
 
-```
+```shell
 $ git log 显示日志
 $ git show <commit> 显示某个提交的详细内容
 $ git blame <file> 在每一行显示 commit 号,提交者,最早提交日期
@@ -47,7 +47,7 @@ $ git blame <file> 在每一行显示 commit 号,提交者,最早提交日期
 
 ------
 
-```
+```shell
 $ git branch 显示本地分支
 $ git checkout <branch> 切换分支
 $ git branch <new-branch> 新建分支
@@ -62,7 +62,7 @@ $ git tag <tag-name> 给当前分支打标签
 
 ------
 
-```
+```shell
 $ git remote -v 列出远程分支详细信息
 $ git remote show <remote> 显示某个分支信息
 $ git remote add <remote> <url> 添加一个新的远程仓库
@@ -79,7 +79,7 @@ $ git push --tags 推送本地标签
 
 ------
 
-```
+```shell
 $ git merge <branch> 合并分支到当前分支，存在两个
 $ git rebase <branch> 合并分支到当前分支，存在一个
 $ git rebase --abort 回到执行 rebase 之前
@@ -95,7 +95,7 @@ $ git rm <resolved-file>
 
 ------
 
-```
+```shell
 $ git reset --hard HEAD 将当前版本重置为 HEAD（用于 merge 失败）
 $ git reset --hard <commit> 将当前版本重置至某一个提交状态(慎用!)
 $ git reset <commit> 将当前版本重置至某一个提交状态，代码不变
@@ -111,7 +111,7 @@ $ git revert <commit> 撤消提交
 
 ------
 
-```
+```shell
 $ git help <command>  获取命令行上的帮助
 ```
 
@@ -119,7 +119,7 @@ $ git help <command>  获取命令行上的帮助
 
 ### 解决无法推送到远程仓库的问题
 
-```
+```shell
 git pull <remote> <branch> --allow-unrelated-histories
 git push <remote> <branch>
 ```
@@ -129,7 +129,7 @@ git push <remote> <branch>
 1. 手动解决冲突
 2. 将冲突文件标记为已解决
 
-```
+```shell
 git add <conflict-file>
 ```
 
@@ -137,7 +137,7 @@ git add <conflict-file>
 
 情况如下
 
-```
+```shell
 $ ssh -T git@github.com
 ssh: connect to host github.com port 22: Connection timed out
 ```
@@ -146,7 +146,7 @@ ssh: connect to host github.com port 22: Connection timed out
 
 ~/.ssh 文件夹下config文件，如果没有新建一个，配置下面的信息
 
-```
+```shell
 Host github.com
 HostName ssh.github.com
 User git
